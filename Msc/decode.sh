@@ -1,7 +1,7 @@
 #!/bin/bash
+# Yannis Folias 16/12/2018
+# Script for decoding FAT / ExFAT timestamps 
 
-#echo "Hello what is your number? "
-#read tim dat
 echo "Provide TIME to be decoded"
 read tim
 echo "Provide DATE to be decoded"
@@ -11,11 +11,11 @@ big1=$(echo $tim | tac -rs .. | echo "$(tr -d '\n')")
 big2=$(echo $dat | tac -rs .. | echo "$(tr -d '\n')")
 echo "Big-endian numbers for time and date are: " $big1 $big2
 
-#binary=$(echo "obase=2; ibase=16; $big" | bc )
+
 binary1=$(python -c "print ''.join([bin(int(i, 16))[2:].zfill(4) for i in '$big1'])")
 binary2=$(python -c "print ''.join([bin(int(i, 16))[2:].zfill(4) for i in '$big2'])")
 echo "Binary numbers for time and date are: " $binary1 $binary2
-#echo "Binary for time is: " $binary2
+
 
 decimal1=$(echo "$((0x$big1))")
 decimal2=$(echo "$((0x$big2))")
