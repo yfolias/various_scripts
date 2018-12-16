@@ -18,7 +18,7 @@ decimal=$(echo "$((0x$big))")
 echo "Decimal is: $decimal"
 
 echo " "
-offset=$((134774*24*60*60))
-unixTimestamp=$((decimal/10000000-offset))
-date -d @$unixTimestamp
+offset=$((134774*24*60*60)) # number of days from Jan 1, 1601 to Jan 1, 1970, converted to seconds
+unixTimestamp=$((decimal/10000000-offset)) # convert 100-nanosecond interval to second, adjust for offset
+date -d @$unixTimestamp # display that timestamp
 echo " "
