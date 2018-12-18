@@ -1,1 +1,1 @@
-# Various scripts I use either at work or for my Msc
+# Various scripts useful for my Msc studies etc
