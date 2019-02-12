@@ -4,8 +4,8 @@ import sys
 import binascii
 import Padding
 
-val='hello'
-password='hello'
+val=raw_input('Please provide your message: ')
+password=raw_input('Please provide your password: ')
 
 plaintext=val
 
