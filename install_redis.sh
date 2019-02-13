@@ -2,6 +2,8 @@
 
 # Yannis Folias - 13/02/2019
 # Redis installation script on Centos Server 6.10
+# Preconfigured conf file missing
+# Use default instead "~/redis-stable/redis.conf"
 
 function download(){
 	echo "[+] Downloading Redis Server..."
