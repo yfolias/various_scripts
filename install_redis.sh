@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Yannis Folias - 13/02/2019
-# Redis installation script on Centos Server
+# Redis installation script on Centos Server 6.10
 
 function download(){
 	echo "[+] Downloading Redis Server..."
