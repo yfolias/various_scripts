@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Oc AWS Inventory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<img id="logo" src="{{ url_for('static', filename='img/ocer.png') }}">
+			</div>
+			<div class="col-sm-6">
+				<h4 id="moto">AWS Inventory</h4>
+			</div>
+		</div>
+		
+		<hr>
+		<div class="row">
+			<div class="col-sm-3 side">
+				<ul>
+					<li><a href="{{ url_for('index') }}">HOME</a></li>
+					<li><a href="{{ url_for('ec2') }}">EC2</a></li>
+					<li><a href="{{ url_for('rds') }}">RDS</a></li>
+					<li><a href="{{ url_for('iam') }}">IAM</a></li>
+					<li><a href="{{ url_for('lb') }}">LOAD BALANCERS</a></li>
+					<li><a href="{{ url_for('vpc') }}">VPCs</a></li>
+					<li><a href="{{ url_for('sec_groups') }}">SECURITY GROUPS</a></li>
+				</ul>
+			</div>
+    			<div class="col-sm-9 main">
+      				<h5>{{ headline }}</h5>
+				<p>{{ body }}</p>
+				<pre>{{ body2 }}</pre>
+    			</div>
+		</div>
+		
+	</div>
 </body>
 </html>
