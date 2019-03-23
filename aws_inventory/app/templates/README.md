@@ -1,1 +1,1 @@
-<h3>Teplates folder</h3>
+<h3>Templates folder</h3>
