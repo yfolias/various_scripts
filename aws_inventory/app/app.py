@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request
 import subprocess
 
 app = Flask(__name__)
-#app.config['DEBUG'] = True
+app.config['DEBUG'] = True
 
 @app.route("/")
 def index():
@@ -65,5 +65,5 @@ def catch_all(path):
     title = "404"
     return render_template("layout.html", headline=headline, title=title)
 
-if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0")
