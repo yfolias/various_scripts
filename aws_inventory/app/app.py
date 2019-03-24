@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request
 import subprocess
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
+#app.config['DEBUG'] = True
 
 @app.route("/")
 def index():
@@ -61,8 +61,9 @@ def sec_groups():
 
 @app.route('/<path:path>')
 def catch_all(path):
-    # returns a 200 (not a 404) with the following contents:
-    return 'your custom error content\n'
+    headline = "The page you are looking for does not exist"
+    title = "404"
+    return render_template("layout.html", headline=headline, title=title)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True,host='0.0.0.0')
