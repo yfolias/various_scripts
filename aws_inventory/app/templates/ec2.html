@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+<div class="main">
+    <h4>Instances running: {{inst_num}}</h4>
+
+                        <table class="descriptions">
+                        <tr>
+                            <th>{{field1}}</th>
+                            <th>{{field2}}</th>
+                            <th>{{field3}}</th>
+                            <th>{{field4}}</th>
+                            <th>{{field5}}</th>
+                            <th></th>
+
+                         </tr>
+                            <tbody>
+
+
+                                    {% for i in range(ec2_ids | length) %}
+                                    <tr>
+                                    <td>{{ec2_ids[i]}}</td>
+                                    <td>name</td>
+                                    <td>{{ec2_pbl[i]}}</td>
+                                    <td>{{ec2_prv[i]}}</td>
+                                    <td>test</td>
+                                    <td><button type="button" class="btn btn-dark ">View Details</button></td>
+                                    </tr>
+                                    {% endfor %}
+
+                            </tbody>
+
+
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+
+</div>
+{% endblock %}

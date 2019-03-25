@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+<div class="main">
+
+                        <table class="descriptions">
+                        <tr>
+                            <th>{{field1}}</th>
+                            <th>{{field2}}</th>
+                            <th>{{field3}}</th>
+                            <th>{{field4}}</th>
+                            <th>{{field5}}</th>
+                            <th></th>
+                         </tr>
+                            <tbody>
+                            {% for i in body %}
+                            <tr>
+                                <td>{{i}}</td>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                                <td><button type="button" class="btn btn-dark ">View Details</button></td>
+                            </tr>
+                            {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+</div>
+{% endblock %}
