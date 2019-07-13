@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Yannis Folias
 # Remote command execution via proxy server by using parallel-ssh
 # https://parallel-ssh.readthedocs.io/en/latest/
